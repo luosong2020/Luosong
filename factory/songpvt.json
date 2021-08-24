@@ -1,0 +1,9 @@
+{
+	"name": "songpvt",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2f187515-5717-4510-b411-6b8c3efc649e",
+		"tenantId": "84568433-d970-41e2-801c-d91c04e1a946"
+	}
+}
