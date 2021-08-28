@@ -1,0 +1,6 @@
+{
+	"name": "Mycomptuter",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
