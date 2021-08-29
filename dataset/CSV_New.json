@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "CSV_New",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
