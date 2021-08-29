@@ -2,14 +2,16 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "FileServer1",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "FileServerLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "new.csv",
+				"container": "songblob"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
