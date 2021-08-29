@@ -6,15 +6,29 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "CSV_New",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
+				},
+				{
+					"dataset": {
+						"referenceName": "CSV_New",
+						"type": "DatasetReference"
+					},
+					"name": "source2"
+				},
+				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"name": "source3"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source2\nsource(output(\n\t\tname as string,\n\t\tproperties as (linkedServiceName as (referenceName as string, type as string), annotations as string[], type as string, typeProperties as (location as (type as string, fileName as string, folderPath as string, container as string)))\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdocumentForm: 'documentPerLine') ~> source3"
 		}
 	}
 }
